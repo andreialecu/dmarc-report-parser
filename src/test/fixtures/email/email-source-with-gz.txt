@@ -1,0 +1,55 @@
+Received: from a7-5.smtp-out.example.com (a7-5.smtp-out.example.com [1.2.3.4])
+ by inbound-smtp.eu-west-1.amazonaws.com with SMTP id gg78uvcg91pcip38hbidpknd7rfm8n38l0a89eg1
+ for contact@example.co;
+ Tue, 25 Apr 2023 10:40:08 +0000 (UTC)
+From: "postmaster@amazonses.com" <postmaster@amazonses.com>
+To: "contact@example.co" <contact@example.co>
+Subject: Dmarc Aggregate Report Domain: {example.co}  Submitter: {Amazon SES}
+  Date: {2023-04-24}  Report-ID: {d745978b-b805-40b2-970c-8379e4070130}
+Thread-Topic: Dmarc Aggregate Report Domain: {example.co}  Submitter: {Amazon
+ SES}  Date: {2023-04-24}  Report-ID: {d745978b-b805-40b2-970c-8379e4070130}
+Thread-Index: ATA3LTRmZnm9nZ11gly18yKQ9GD03w==
+X-MS-Exchange-MessageSentRepresentingType: 1
+Date: Tue, 25 Apr 2023 10:40:08 +0000
+Message-ID:
+	<01020187b7ffcfb5-16ac9c45-49a8-41e0-848e-0a1ab5759945-000000@example.com>
+Content-Language: en-US
+X-MS-Has-Attach: yes
+X-MS-Exchange-Organization-SCL: -1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+received-spf: pass (spfCheck: domain of example.com designates
+ 1.2.3.4 as permitted sender) client-ip=1.2.3.4;
+ envelope-from=01020187b7ffcfb5-16ac9c45-49a8-41e0-848e-0a1ab5759945-000000@example.com;
+ helo=a7-5.smtp-out.example.com;
+Content-Type: multipart/mixed;
+	boundary="_002_01020187b7ffcfb516ac9c4549a841e0848e0a1ab5759945000000e_"
+MIME-Version: 1.0
+
+--_002_01020187b7ffcfb516ac9c4549a841e0848e0a1ab5759945000000e_
+Content-Type: text/plain; charset="us-ascii"
+Content-ID: <180C7C0CD6B1C24898A74A847AB466DA@1>
+
+This MIME email was sent through Amazon SES.
+--_002_01020187b7ffcfb516ac9c4549a841e0848e0a1ab5759945000000e_
+Content-Type: application/octet-stream;
+	name="amazonses.com!example.co!1682294400!1682380800.xml.gz"
+Content-Description: amazonses.com!example.co!1682294400!1682380800.xml.gz
+Content-Disposition: attachment;
+	filename="amazonses.com!example.co!1682294400!1682380800.xml.gz"; size=937;
+	creation-date="Tue, 25 Apr 2023 10:40:20 GMT";
+	modification-date="Tue, 25 Apr 2023 10:40:20 GMT"
+Content-ID: <3106B86F6F4EE54982269756E750C09E@1>
+Content-Transfer-Encoding: base64
+
+H4sIAAAAAAAAAI1UwXKbMBA9O1/RyR0QNq7xjKokhxzbHnLrhRGw2JqApJGE0/brq5WAEI87k4ut
+fbt6b592B/rwe+i/XMBYoeS3+zwl9w/sjnYAbc2bV3a3oVOSkTSn2Rx43IBWxlUDON5yxz20ocqc
+KskHYE/fn379/JG8PL/QbAGxAgYueqaVdQO3DswjH/hfJS3YtFEDzWIeKyd+0bL2UOyPh7JO6pLs
+k4LU2+R4IE1S7g5HKMiB5DtCs/d6vO1bgspweQqyG1rDSUiWfy2322NREF8fkZAE2YbUriQlpjBG
+kuwDyyKxsky16kXzp9Jj3Qt7hklceReSXaBxThlvzDNFCLO8fRUDMzSLhwBZ3QUE/xHQTCoJNNMh
+snNoY6wbx3JsFA8IdIr54fhf7PJGS/4xG2Vic0a9RddWjaaBSmi2L9JtQdIizQuvscChqlGjdMge
+DwGbFODC+9G/UOBF28L6wQqHCxL7XSNTDVrW3FqfnNwHgx3r/ODRYRc1slsifgSxeypakE50wu/j
+PMML9EpD1Rk1MBiTN7AuydPr/fpQFm6egbdgIrAe2RoP2lealI/uXBmwY++mJlaWpoFfyb+vQdhw
+vDq9xhRE7wvPDcbbW/VJuvl5F7b/PtQnqeeFza4eA8viyvm9nL8m/wBNJM1KbgQAAA==
+
+--_002_01020187b7ffcfb516ac9c4549a841e0848e0a1ab5759945000000e_--

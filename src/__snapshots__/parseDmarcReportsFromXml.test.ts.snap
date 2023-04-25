@@ -1,0 +1,586 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parseDmarcReportsFromXml should parse a DMARC report that is passing but has a DKIM failure 1`] = `
+{
+  "dkimFailures": [
+    {
+      "authResults": {
+        "dkim": [
+          {
+            "domain": "bix-business.com",
+            "humanResult": "",
+            "result": "fail",
+          },
+        ],
+        "spf": [
+          {
+            "domain": "bix-business.com",
+            "result": "pass",
+          },
+        ],
+      },
+      "identifiers": {
+        "headerFrom": "bix-business.com",
+      },
+      "row": {
+        "count": 2,
+        "policyEvaluated": {
+          "disposition": "none",
+          "dkim": "fail",
+          "spf": "pass",
+        },
+        "sourceIp": "203.0.113.209",
+      },
+    },
+  ],
+  "failures": [],
+  "reports": [
+    {
+      "policyPublished": {
+        "adkim": "r",
+        "aspf": "r",
+        "domain": "bix-business.com",
+        "p": "none",
+        "pct": 100,
+        "sp": "none",
+      },
+      "record": [
+        {
+          "authResults": {
+            "dkim": [
+              {
+                "domain": "bix-business.com",
+                "humanResult": "",
+                "result": "fail",
+              },
+            ],
+            "spf": [
+              {
+                "domain": "bix-business.com",
+                "result": "pass",
+              },
+            ],
+          },
+          "identifiers": {
+            "headerFrom": "bix-business.com",
+          },
+          "row": {
+            "count": 2,
+            "policyEvaluated": {
+              "disposition": "none",
+              "dkim": "fail",
+              "spf": "pass",
+            },
+            "sourceIp": "203.0.113.209",
+          },
+        },
+      ],
+      "reportMetadata": {
+        "dateRange": {
+          "begin": 1335571200,
+          "end": 1335657599,
+        },
+        "email": "noreply-dmarc-support@solarmora.com",
+        "extraContactInfo": "http://solarmora.com/dmarc/support",
+        "orgName": "solarmora.com",
+        "reportId": "9391651994964116463",
+      },
+    },
+  ],
+  "spfFailures": [],
+  "totalFailures": 0,
+  "totalReports": 1,
+}
+`;
+
+exports[`parseDmarcReportsFromXml should parse a DMARC report with a SPF failure 1`] = `
+{
+  "dkimFailures": [],
+  "failures": [],
+  "reports": [
+    {
+      "policyPublished": {
+        "adkim": "r",
+        "aspf": "r",
+        "domain": "bix-business.com",
+        "p": "none",
+        "pct": 100,
+        "sp": "none",
+      },
+      "record": [
+        {
+          "authResults": {
+            "dkim": [
+              {
+                "domain": "bix-business.com",
+                "humanResult": "",
+                "result": "pass",
+              },
+            ],
+            "spf": [
+              {
+                "domain": "bix-business.com",
+                "result": "fail",
+              },
+            ],
+          },
+          "identifiers": {
+            "headerFrom": "bix-business.com",
+          },
+          "row": {
+            "count": 2,
+            "policyEvaluated": {
+              "disposition": "none",
+              "dkim": "pass",
+              "spf": "fail",
+            },
+            "sourceIp": "203.0.113.209",
+          },
+        },
+      ],
+      "reportMetadata": {
+        "dateRange": {
+          "begin": 1335571200,
+          "end": 1335657599,
+        },
+        "email": "noreply-dmarc-support@solarmora.com",
+        "extraContactInfo": "http://solarmora.com/dmarc/support",
+        "orgName": "solarmora.com",
+        "reportId": "9391651994964116463",
+      },
+    },
+  ],
+  "spfFailures": [
+    {
+      "authResults": {
+        "dkim": [
+          {
+            "domain": "bix-business.com",
+            "humanResult": "",
+            "result": "pass",
+          },
+        ],
+        "spf": [
+          {
+            "domain": "bix-business.com",
+            "result": "fail",
+          },
+        ],
+      },
+      "identifiers": {
+        "headerFrom": "bix-business.com",
+      },
+      "row": {
+        "count": 2,
+        "policyEvaluated": {
+          "disposition": "none",
+          "dkim": "pass",
+          "spf": "fail",
+        },
+        "sourceIp": "203.0.113.209",
+      },
+    },
+  ],
+  "totalFailures": 0,
+  "totalReports": 1,
+}
+`;
+
+exports[`parseDmarcReportsFromXml should parse a DMARC report with a quarantine disposition 1`] = `
+{
+  "dkimFailures": [
+    {
+      "authResults": {
+        "dkim": [
+          {
+            "domain": "bix-business.com",
+            "humanResult": "",
+            "result": "fail",
+          },
+        ],
+        "spf": [
+          {
+            "domain": "bix-business.com",
+            "result": "fail",
+          },
+        ],
+      },
+      "identifiers": {
+        "headerFrom": "bix-business.com",
+      },
+      "row": {
+        "count": 2,
+        "policyEvaluated": {
+          "disposition": "quarantine",
+          "dkim": "fail",
+          "spf": "fail",
+        },
+        "sourceIp": "203.0.113.209",
+      },
+    },
+  ],
+  "failures": [
+    {
+      "authResults": {
+        "dkim": [
+          {
+            "domain": "bix-business.com",
+            "humanResult": "",
+            "result": "fail",
+          },
+        ],
+        "spf": [
+          {
+            "domain": "bix-business.com",
+            "result": "fail",
+          },
+        ],
+      },
+      "identifiers": {
+        "headerFrom": "bix-business.com",
+      },
+      "row": {
+        "count": 2,
+        "policyEvaluated": {
+          "disposition": "quarantine",
+          "dkim": "fail",
+          "spf": "fail",
+        },
+        "sourceIp": "203.0.113.209",
+      },
+    },
+  ],
+  "reports": [
+    {
+      "policyPublished": {
+        "adkim": "r",
+        "aspf": "r",
+        "domain": "bix-business.com",
+        "p": "quarantine",
+        "pct": 100,
+        "sp": "none",
+      },
+      "record": [
+        {
+          "authResults": {
+            "dkim": [
+              {
+                "domain": "bix-business.com",
+                "humanResult": "",
+                "result": "fail",
+              },
+            ],
+            "spf": [
+              {
+                "domain": "bix-business.com",
+                "result": "fail",
+              },
+            ],
+          },
+          "identifiers": {
+            "headerFrom": "bix-business.com",
+          },
+          "row": {
+            "count": 2,
+            "policyEvaluated": {
+              "disposition": "quarantine",
+              "dkim": "fail",
+              "spf": "fail",
+            },
+            "sourceIp": "203.0.113.209",
+          },
+        },
+      ],
+      "reportMetadata": {
+        "dateRange": {
+          "begin": 1335571200,
+          "end": 1335657599,
+        },
+        "email": "noreply-dmarc-support@solarmora.com",
+        "extraContactInfo": "http://solarmora.com/dmarc/support",
+        "orgName": "solarmora.com",
+        "reportId": "9391651994964116463",
+      },
+    },
+  ],
+  "spfFailures": [
+    {
+      "authResults": {
+        "dkim": [
+          {
+            "domain": "bix-business.com",
+            "humanResult": "",
+            "result": "fail",
+          },
+        ],
+        "spf": [
+          {
+            "domain": "bix-business.com",
+            "result": "fail",
+          },
+        ],
+      },
+      "identifiers": {
+        "headerFrom": "bix-business.com",
+      },
+      "row": {
+        "count": 2,
+        "policyEvaluated": {
+          "disposition": "quarantine",
+          "dkim": "fail",
+          "spf": "fail",
+        },
+        "sourceIp": "203.0.113.209",
+      },
+    },
+  ],
+  "totalFailures": 1,
+  "totalReports": 1,
+}
+`;
+
+exports[`parseDmarcReportsFromXml should parse a DMARC report with a reject disposition 1`] = `
+{
+  "dkimFailures": [
+    {
+      "authResults": {
+        "dkim": [
+          {
+            "domain": "bix-business.com",
+            "humanResult": "",
+            "result": "fail",
+          },
+        ],
+        "spf": [
+          {
+            "domain": "bix-business.com",
+            "result": "fail",
+          },
+        ],
+      },
+      "identifiers": {
+        "headerFrom": "bix-business.com",
+      },
+      "row": {
+        "count": 2,
+        "policyEvaluated": {
+          "disposition": "reject",
+          "dkim": "fail",
+          "spf": "fail",
+        },
+        "sourceIp": "203.0.113.209",
+      },
+    },
+  ],
+  "failures": [
+    {
+      "authResults": {
+        "dkim": [
+          {
+            "domain": "bix-business.com",
+            "humanResult": "",
+            "result": "fail",
+          },
+        ],
+        "spf": [
+          {
+            "domain": "bix-business.com",
+            "result": "fail",
+          },
+        ],
+      },
+      "identifiers": {
+        "headerFrom": "bix-business.com",
+      },
+      "row": {
+        "count": 2,
+        "policyEvaluated": {
+          "disposition": "reject",
+          "dkim": "fail",
+          "spf": "fail",
+        },
+        "sourceIp": "203.0.113.209",
+      },
+    },
+  ],
+  "reports": [
+    {
+      "policyPublished": {
+        "adkim": "r",
+        "aspf": "r",
+        "domain": "bix-business.com",
+        "p": "reject",
+        "pct": 100,
+        "sp": "none",
+      },
+      "record": [
+        {
+          "authResults": {
+            "dkim": [
+              {
+                "domain": "bix-business.com",
+                "humanResult": "",
+                "result": "fail",
+              },
+            ],
+            "spf": [
+              {
+                "domain": "bix-business.com",
+                "result": "fail",
+              },
+            ],
+          },
+          "identifiers": {
+            "headerFrom": "bix-business.com",
+          },
+          "row": {
+            "count": 2,
+            "policyEvaluated": {
+              "disposition": "reject",
+              "dkim": "fail",
+              "spf": "fail",
+            },
+            "sourceIp": "203.0.113.209",
+          },
+        },
+      ],
+      "reportMetadata": {
+        "dateRange": {
+          "begin": 1335571200,
+          "end": 1335657599,
+        },
+        "email": "noreply-dmarc-support@solarmora.com",
+        "extraContactInfo": "http://solarmora.com/dmarc/support",
+        "orgName": "solarmora.com",
+        "reportId": "9391651994964116463",
+      },
+    },
+  ],
+  "spfFailures": [
+    {
+      "authResults": {
+        "dkim": [
+          {
+            "domain": "bix-business.com",
+            "humanResult": "",
+            "result": "fail",
+          },
+        ],
+        "spf": [
+          {
+            "domain": "bix-business.com",
+            "result": "fail",
+          },
+        ],
+      },
+      "identifiers": {
+        "headerFrom": "bix-business.com",
+      },
+      "row": {
+        "count": 2,
+        "policyEvaluated": {
+          "disposition": "reject",
+          "dkim": "fail",
+          "spf": "fail",
+        },
+        "sourceIp": "203.0.113.209",
+      },
+    },
+  ],
+  "totalFailures": 1,
+  "totalReports": 1,
+}
+`;
+
+exports[`parseDmarcReportsFromXml should parse a single valid DMARC report 1`] = `
+{
+  "dkimFailures": [
+    {
+      "authResults": {
+        "dkim": [
+          {
+            "domain": "bix-business.com",
+            "humanResult": "",
+            "result": "fail",
+          },
+        ],
+        "spf": [
+          {
+            "domain": "bix-business.com",
+            "result": "pass",
+          },
+        ],
+      },
+      "identifiers": {
+        "headerFrom": "bix-business.com",
+      },
+      "row": {
+        "count": 2,
+        "policyEvaluated": {
+          "disposition": "none",
+          "dkim": "fail",
+          "spf": "pass",
+        },
+        "sourceIp": "203.0.113.209",
+      },
+    },
+  ],
+  "failures": [],
+  "reports": [
+    {
+      "policyPublished": {
+        "adkim": "r",
+        "aspf": "r",
+        "domain": "bix-business.com",
+        "p": "none",
+        "pct": 100,
+        "sp": "none",
+      },
+      "record": [
+        {
+          "authResults": {
+            "dkim": [
+              {
+                "domain": "bix-business.com",
+                "humanResult": "",
+                "result": "fail",
+              },
+            ],
+            "spf": [
+              {
+                "domain": "bix-business.com",
+                "result": "pass",
+              },
+            ],
+          },
+          "identifiers": {
+            "headerFrom": "bix-business.com",
+          },
+          "row": {
+            "count": 2,
+            "policyEvaluated": {
+              "disposition": "none",
+              "dkim": "fail",
+              "spf": "pass",
+            },
+            "sourceIp": "203.0.113.209",
+          },
+        },
+      ],
+      "reportMetadata": {
+        "dateRange": {
+          "begin": 1335571200,
+          "end": 1335657599,
+        },
+        "email": "noreply-dmarc-support@solarmora.com",
+        "extraContactInfo": "http://solarmora.com/dmarc/support",
+        "orgName": "solarmora.com",
+        "reportId": "9391651994964116463",
+      },
+    },
+  ],
+  "spfFailures": [],
+  "totalFailures": 0,
+  "totalReports": 1,
+}
+`;
