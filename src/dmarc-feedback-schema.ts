@@ -44,9 +44,9 @@ const PolicyPublishedType = zodToCamelCase(
     domain: singleItem(z.string()),
     adkim: singleItem(AlignmentType).optional(),
     aspf: singleItem(AlignmentType).optional(),
-    p: singleItem(DispositionType),
-    sp: singleItem(DispositionType),
-    pct: singleItem(z.coerce.number().int()),
+    p: singleItem(DispositionType).optional(),
+    sp: singleItem(DispositionType).optional(),
+    pct: singleItem(z.coerce.number().int()).optional(),
     fo: singleItem(z.string()).optional(),
   })
 );
