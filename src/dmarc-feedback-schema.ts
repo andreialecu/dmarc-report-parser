@@ -42,10 +42,10 @@ const DispositionType = z.enum(["none", "quarantine", "reject"]);
 const PolicyPublishedType = zodToCamelCase(
   z.object({
     domain: singleItem(z.string()),
+    p: singleItem(DispositionType),
+    sp: singleItem(DispositionType).optional(),
     adkim: singleItem(AlignmentType).optional(),
     aspf: singleItem(AlignmentType).optional(),
-    p: singleItem(DispositionType).optional(),
-    sp: singleItem(DispositionType).optional(),
     pct: singleItem(z.coerce.number().int()).optional(),
     fo: singleItem(z.string()).optional(),
   })
