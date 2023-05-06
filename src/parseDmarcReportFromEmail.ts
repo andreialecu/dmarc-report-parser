@@ -1,7 +1,7 @@
 import { simpleParser, ParsedMail } from "mailparser";
 import JSZip from "jszip";
 import { gunzip } from "zlib";
-import { parseDmarcReportsFromXml } from "./parseDmarcReportsFromXml";
+import { DmarcReportResults, parseDmarcReportsFromXml } from "./parseDmarcReportsFromXml";
 
 /**
  * Parses a DMARC report from a raw email message
@@ -9,7 +9,7 @@ import { parseDmarcReportsFromXml } from "./parseDmarcReportsFromXml";
  * @throws Error if the email does not contain a DMARC report
  * @param rawEmail The raw email message
  */
-export async function parseDmarcReportFromEmail(rawEmail: string) {
+export async function parseDmarcReportFromEmail(rawEmail: string): Promise<DmarcReportResults> {
   // Parse the raw email to extract attachments
   const parsedEmail: ParsedMail = await simpleParser(rawEmail);
 

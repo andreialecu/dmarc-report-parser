@@ -158,3 +158,6 @@ export const DmarcFeedbackSchema = zodToCamelCase(
     record: z.array(RecordType),
   })
 );
+
+export type DmarcFeedback = z.infer<typeof DmarcFeedbackSchema>;
+export type DmarcFeedbackRecord = z.infer<typeof RecordType>;
