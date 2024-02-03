@@ -28,7 +28,7 @@
     "@types/mailparser": "^3.4.0",
     "@types/node": "^18.16.0",
     "@types/xml2js": "^0.4.11",
-    "release-it": "^15.10.1",
+    "release-it": "^17.0.3",
     "typescript": "^5.0.4",
     "vitest": "^1.2.2"
   },
