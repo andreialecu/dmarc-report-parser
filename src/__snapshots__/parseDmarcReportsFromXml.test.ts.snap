@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`parseDmarcReportsFromXml should parse a DMARC report that is passing but has a DKIM failure 1`] = `
+exports[`parseDmarcReportsFromXml > should parse a DMARC report that is passing but has a DKIM failure 1`] = `
 {
   "dkimFailures": [
     {
@@ -93,7 +93,7 @@ exports[`parseDmarcReportsFromXml should parse a DMARC report that is passing bu
 }
 `;
 
-exports[`parseDmarcReportsFromXml should parse a DMARC report with a SPF failure 1`] = `
+exports[`parseDmarcReportsFromXml > should parse a DMARC report with a SPF failure 1`] = `
 {
   "dkimFailures": [],
   "failures": [],
@@ -186,7 +186,7 @@ exports[`parseDmarcReportsFromXml should parse a DMARC report with a SPF failure
 }
 `;
 
-exports[`parseDmarcReportsFromXml should parse a DMARC report with a quarantine disposition 1`] = `
+exports[`parseDmarcReportsFromXml > should parse a DMARC report with a quarantine disposition 1`] = `
 {
   "dkimFailures": [
     {
@@ -339,7 +339,7 @@ exports[`parseDmarcReportsFromXml should parse a DMARC report with a quarantine 
 }
 `;
 
-exports[`parseDmarcReportsFromXml should parse a DMARC report with a reject disposition 1`] = `
+exports[`parseDmarcReportsFromXml > should parse a DMARC report with a reject disposition 1`] = `
 {
   "dkimFailures": [
     {
@@ -492,7 +492,7 @@ exports[`parseDmarcReportsFromXml should parse a DMARC report with a reject disp
 }
 `;
 
-exports[`parseDmarcReportsFromXml should parse a single valid DMARC report 1`] = `
+exports[`parseDmarcReportsFromXml > should parse a single valid DMARC report 1`] = `
 {
   "dkimFailures": [
     {

@@ -1,6 +1,7 @@
 import { readFileSync } from "fs";
 import { join } from "path";
 import { parseDmarcReportsFromXml } from "./parseDmarcReportsFromXml";
+import { it, describe, expect } from 'vitest';
 
 describe("parseDmarcReportsFromXml", () => {
   const validXml = readFileSync(

@@ -1,6 +1,7 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { parseDmarcReportFromEmail } from './parseDmarcReportFromEmail';
+import { it, describe, expect } from 'vitest';
 
 describe('parseDMARCReport', () => {
 
