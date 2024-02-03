@@ -15,7 +15,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "camelcase-keys": "^8.0.2",
+    "camelcase-keys": "^7.0.2",
     "jszip": "^3.10.1",
     "mailparser": "^3.6.4",
     "type-fest": "^3.8.0",
